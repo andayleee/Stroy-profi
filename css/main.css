@@ -1,0 +1,120 @@
+/* USER VARIABLES SECTION */
+
+:root {
+	--accent: orange;
+	--text: #333;
+	--regular-text: 16px;
+	--head-text: 24px;
+	--lineheight: 1.65;
+	--userfont: roboto-st, sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+	--index: calc(0.8vw + 0.8vh);
+    --index1: calc(0.8vw);
+}
+
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { --bs-gutter-x: .625rem; }
+.row, .row > * { --bs-gutter-x: 1.25rem; }
+
+/* FONTS LOAD SECTION */
+
+@font-face { src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 400; font-style: normal; }
+@font-face { src: url("../fonts/roboto-italic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 400; font-style: italic; }
+@font-face { src: url("../fonts/roboto-bold-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: normal; }
+@font-face { src: url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: italic; }
+
+/* GENERAL CSS SETTINGS */
+
+::placeholder { color: #666; }
+::selection { background-color: var(--accent); color: #fff; }
+input, textarea { outline: none; }
+input:focus:required:invalid, textarea:focus:required:invalid { border-color: red; }
+input:required:valid, textarea:required:valid { border-color: green; }
+
+body {
+	font-size: 18px;
+	line-height: var(--lineheight);
+	color: var(--text);
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+	background-color: #EBECF0;
+    font-family: var(--userfont);
+}
+
+/* USER STYLES */
+
+.image {
+	max-width: 100%;
+	margin-bottom: var(--bs-gutter-x);
+	border-radius: 4px;
+}
+
+.accent {
+	font-family: var(--userfont);
+	text-transform: uppercase;
+    color: var(--text);
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: 42px;
+    letter-spacing: calc(var(--index) /3);
+    text-align: center;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.accent2 {
+	font-family: var(--userfont);
+    color: var(--text);
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: 28px;
+    letter-spacing: calc(var(--index) /5,5);
+    text-align: center;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.accent-header {
+	color: red;
+	font-weight: bold;
+	font-size: var(--head-text);
+}
+
+.card{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+	overflow: hidden;
+	width: 100px; 
+	height: 100px; 
+	transition: transform 0.3s ease;
+}
+
+.card:hover  {
+	transform: scale(1.05); 
+}
+
+#information {
+    position: sticky;
+    top: 96px;
+    overflow-y: auto; 
+}
+
+p {
+	font-size: 18px;
+	color: var(--text);
+}
+
+.br-10{
+	border-radius: 10px;
+}
