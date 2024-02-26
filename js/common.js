@@ -116,21 +116,21 @@ document.addEventListener("DOMContentLoaded", function() {
         );
         map.addChild(new YMapDefaultSchemeLayer());
 
-        const markerElement = document.createElement('div');
-        markerElement.className = 'marker-class';
-        markerElement.innerText = "I'm marker!";
+        // const markerElement = document.createElement('div');
+        // markerElement.className = 'marker-class';
+        // markerElement.innerText = "I'm marker!";
 
-        const marker = new YMapMarker(
-        {
-            source: 'markerSource',
-            coordinates: [37.411393, 54.955394],
-            draggable: true,
-            mapFollowsOnDrag: true
-        },
-        markerElement
-        );
+        // const marker = new YMapMarker(
+        // {
+        //     source: 'markerSource',
+        //     coordinates: [37.411393, 54.955394],
+        //     draggable: true,
+        //     mapFollowsOnDrag: true
+        // },
+        // markerElement
+        // );
 
-        map.addChild(marker);
+        // map.addChild(marker);
         
     }
 });
